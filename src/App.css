@@ -2,17 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100vw;
+  /* overflow: hidden; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +17,60 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul,
+li {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ticket {
+  display: flex;
+  background-color: #8e44ad;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket_text {
+  font-size: 13px;
+  display: block;
+  padding: 0;
+  color: #fff5f5;
+}
+
+.menu {
+  padding: 10px 0;
+}
+.list_menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.list_menu_item {
+  padding: 0 10px;
+}
+
+.list_menu_item a p {
+  text-transform: uppercase;
+}
+.menu_hove {
+  display: none;
+  position: absolute;
+}
+.menu:hover > .menu_hove {
+  display: block;
+}
+
+.position-menu {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  max-height: calc(100% - 40px);
+  height: 100px;
+}
+
+.position-menu:hover {
+  background-color: white;
 }
